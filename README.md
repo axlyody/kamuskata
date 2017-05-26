@@ -7,6 +7,10 @@ Sebenarnya cuma hasil tugas yang saya buat, untuk kelompok teman dikampus :p
 
 ![Tambah kata](http://i.imgur.com/zhSH9H6.png)
 
+![Admin database](http://i.imgur.com/ggGI0Ek.png)
+
+![Terjemahan saya](http://i.imgur.com/bTHJ5HG.png)
+
 ## Install
 
 Clone 
