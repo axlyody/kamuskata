@@ -15,6 +15,10 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * Class ApiController
+ * @package Kamus\Http\Controllers
+ */
 class ApiController
 {
     use ValidatesRequests;
@@ -24,6 +28,11 @@ class ApiController
 
     }
 
+    /**
+     * @param Request $request
+     * @param $sub
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function v1(Request $request, $sub)
     {
         if ($sub == 'terjemah') {

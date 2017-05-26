@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * Class HomeController
+ * @package Kamus\Http\Controllers
+ */
 class HomeController extends Controller
 {
     /**
@@ -30,6 +34,9 @@ class HomeController extends Controller
         return view('home', array('bahasa' => $bahasa));
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function tambah_arti()
     {
         $bahasa = DB::table('bahasa')
@@ -39,6 +46,11 @@ class HomeController extends Controller
 
 
     // ADMIN SECTION
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
+     */
     public function database(Request $request)
     {
         $ambilDB = "";
@@ -61,6 +73,11 @@ class HomeController extends Controller
         return view('admin_database', array('data' => $ambilDB, 'bahasa' => $ambilBahasa, 'judul' => $judulb));
     }
 
+    /**
+     * @param $slug
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function database_del($slug, $id)
     {
         DB::table('kamus')
@@ -72,6 +89,11 @@ class HomeController extends Controller
         return redirect('database?bahasa=' . $slug);
     }
 
+    /**
+     * @param $slug
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function database_acc($slug, $id)
     {
         DB::table('kamus')
@@ -85,12 +107,19 @@ class HomeController extends Controller
         return redirect('database?bahasa=' . $slug);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function bahasa()
     {
         $data = DB::table('bahasa')->get();
         return view('admin_bahasa', array('data' => $data));
     }
 
+    /**
+     * @param $slug
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function bahasa_del($slug)
     {
         DB::table('bahasa')
@@ -101,6 +130,10 @@ class HomeController extends Controller
         return redirect('bahasa');
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function bahasa_add(Request $request)
     {
 
@@ -123,6 +156,9 @@ class HomeController extends Controller
         return view('admin_bahasa_tambah');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function terjemahan_saya()
     {
         $data = DB::table('kamus')
