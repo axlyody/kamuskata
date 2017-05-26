@@ -1,5 +1,7 @@
 ## :whale: KamusKata
-Cara membuat kamus dengan Laravel
+Cara membuat kamus dengan Laravel.
+
+Sebenarnya cuma hasil tugas yang saya buat, untuk kelompok teman dikampus :p
 
 ![Terjemahan](http://i.imgur.com/VIqohJ7.png)
 
