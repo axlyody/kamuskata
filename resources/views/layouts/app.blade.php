@@ -75,7 +75,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <i class="fa fa-language"></i> &nbsp; Penerjemah Tampan
+                    <i class="fa fa-language"></i> &nbsp; KamusKata
                 </a>
             </div>
 
@@ -139,7 +139,8 @@
         <div class="row">
             <p style="float:left" class="text-muted">&copy; 2017 <i class="fa fa-heart"></i> Axl Yody. Build with
                 Laravel 5 <i class="fa fa-close"></i> Bootstrap 3</p>
-            <p style="float:right" class="text-muted">Fork me on <a href="http://github.com/axlyody">GitHub</a></p>
+            <p style="float:right" class="text-muted">Fork me on <a
+                        href="http://github.com/axlyody/kamuskata">GitHub</a></p>
         </div>
     </div>
 </footer>
