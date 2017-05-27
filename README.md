@@ -3,7 +3,7 @@ Cara membuat kamus dengan Laravel.
 
 Sebenarnya cuma hasil tugas yang saya buat, untuk kelompok teman dikampus :p
 
-![Terjemahan](http://i.imgur.com/VIqohJ7.png)
+![Terjemahan](http://i.imgur.com/mKbq3UE.png)
 
 ![Tambah kata](http://i.imgur.com/zhSH9H6.png)
 
