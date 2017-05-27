@@ -46,7 +46,7 @@ class ApiController
                 ->whereIn('kata', explode(' ', $request->get('kata', [])))
                 ->get();
             if (!$db->first()) {
-                return response()->json(array(array('arti' => explode(' ', $request->get('kata', [])))));
+                return response()->json(array(array('arti' => explode(',', $request->get('kata', [])))));
             } else {
                 return response()->json($db);
             }
