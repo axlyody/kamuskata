@@ -39,14 +39,14 @@ class ApiController
             $db = DB::table('kamus')
                 ->join('bahasa', 'kamus.bahasa_awal_slug', '=', 'bahasa.slug')
                 ->where([
-                    'kamus.kata' => $request->get('kata'),
                     'kamus.bahasa_awal_slug' => $request->get('dari'),
                     'kamus.bahasa_akhir_slug' => $request->get('ke'),
                     'kamus.disetujui' => 1
                 ])
-                ->first();
-            if (!$db) {
-                return response()->json(array('arti' => $request->get('kata')));
+                ->whereIn('kata', explode(' ', $request->get('kata', [])))
+                ->get();
+            if (!$db->first()) {
+                return response()->json(array(array('arti' => $request->get('kata'))));
             } else {
                 return response()->json($db);
             }
