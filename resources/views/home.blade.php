@@ -7,9 +7,11 @@
                 <form class="form-horizontal">
                     <div class="form-group">
                         <div class="col-xs-7 col-md-8">
-                            <select class="selectpicker" data-live-search="true" id="dari">
+                            <select class="selectpicker show-tick" data-live-search="true" id="dari"
+                                    data-style="btn-info">
                                 @foreach($bahasa->orderBy('slug','asc')->get() as $bahasa1)
-                                    <option name="slug" value="{{ $bahasa1->slug }}">{{ $bahasa1->bahasa }}</option>
+                                    <option name="slug" value="{{ $bahasa1->slug }}"
+                                            onclick="terjemah(this)">{{ $bahasa1->bahasa }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -31,7 +33,8 @@
                 <form class="form-horizontal">
                     <div class="form-group">
                         <div class="col-xs-7 col-md-8">
-                            <select class="selectpicker" data-live-search="true" id="ke">
+                            <select class="selectpicker show-tick" data-live-search="true" id="ke"
+                                    data-style="btn-info">
 
                                 @foreach($bahasa->orderBy('slug','desc')->get() as $bahasa2)
                                     <option name="slug2" value="{{ $bahasa2->slug }}">{{ $bahasa2->bahasa }}</option>
@@ -96,7 +99,13 @@
             };
 
             getJSON('{{ url('/') }}/api/v1/terjemah?kata=' + kata_awal + '&dari=' + dari + '&ke=' + ke + '').then(function (data) {
-                $("#artinya").val(data.arti);
+                var artinya = '',
+                    el = $("#artinya");
+                $.each(data, function (key, val) {
+                    artinya += val.arti + " "
+                });
+                el.val(artinya);
+
                 //display the result in an HTML element
             }, function (status) { //error detection....
                 alert('Something went wrong.');
