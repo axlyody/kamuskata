@@ -15,17 +15,21 @@ Sebenarnya cuma hasil tugas yang saya buat, untuk kelompok teman dikampus :p
 
 Clone 
 ```sh
-$ git clone git@github.com:axlyody/kamuskata.git
+git clone git@github.com:axlyody/kamuskata.git
 ```
 Ambil vendor
 ```sh
-$ composer update
+composer update
 ```
 Sesuaikan database kamu di file .env
 
 Selanjutnya memasukan table dengan migrate
 ```sh
-$ php artisan migrate
+php artisan migrate
+```
+Jalankan
+```sh
+php artisan serve
 ```
 
 ## Lisensi
