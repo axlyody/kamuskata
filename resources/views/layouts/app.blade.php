@@ -11,11 +11,10 @@
     <title>@yield('title')</title>
 
     <!-- Styles -->
-    <link href="{{ asset('https://bootswatch.com/cosmo/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css') }}"
-          rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-select.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/sweetalert2.min.css') }}" rel="stylesheet">
     <style>
         .swal2-modal {
             border-radius: 0;
@@ -137,7 +136,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <p style="float:left" class="text-muted">&copy; 2017 <i class="fa fa-heart"></i> Axl Yody. Build with
+            <p style="float:left" class="text-muted">&copy; 2017 <i class="fa fa-heart"></i> Axl Yody . Build with
                 Laravel 5 <i class="fa fa-close"></i> Bootstrap 3</p>
             <p style="float:right" class="text-muted">Fork me on <a
                         href="http://github.com/axlyody/kamuskata">GitHub</a></p>
@@ -146,8 +145,8 @@
 </footer>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.js"></script>
+<script src="{{ asset('js/bootstrap-select.min.js') }}"></script>
+<script src="{{ asset('js/sweetalert2.min.js') }}"></script>
 <script>
 
     $("#tambah").submit(function (e) {
