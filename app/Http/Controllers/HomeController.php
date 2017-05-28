@@ -1,4 +1,11 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Axl Yody
+ * Date: 2017/05/26
+ * Time: 15:06
+ */
+
 
 namespace Kamus\Http\Controllers;
 
