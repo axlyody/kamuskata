@@ -16,15 +16,14 @@ class Kamus extends Migration
         Schema::create('kamus', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('kamus_id');
-            $table->integer('bahasa_awal_id');
-            $table->integer('bahasa_akhir_id');
+            $table->string('bahasa_awal_slug');
+            $table->string('bahasa_akhir_slug');
             $table->string('submitter')->nullable();
-            $table->string('slug');
+            $table->string('slug')->nullable();
             $table->string('kata');
             $table->string('arti');
             $table->integer('disetujui');
             $table->timestamp('created_at')->nullable();
-
         });
     }
 
