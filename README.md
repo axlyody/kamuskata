@@ -26,10 +26,23 @@ Sesuaikan database kamu di file .env
 Selanjutnya memasukan table dengan migrate
 ```sh
 php artisan migrate
+php artisan db:seed
 ```
 Jalankan
 ```sh
 php artisan serve
+```
+
+#### User
+Admin
+```sh
+admin@admin.com
+admin
+```
+User
+```sh
+user@user.com
+user
 ```
 
 ## Lisensi
